@@ -27,6 +27,10 @@
       <Name>Dim Date.dim</Name>
       <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Transaction Detail.dim</Name>
+      <FullPath>Dim Transaction Detail.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

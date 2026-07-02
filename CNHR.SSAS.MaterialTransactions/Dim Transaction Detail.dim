@@ -1,0 +1,247 @@
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8c1d2e3f-4a5b-4c6d-8e9f-0a1b2c3d4e5f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Transaction Detail</ID>
+  <Name>Dim Transaction Detail</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9d2e3f4a-5b6c-4d7e-9f0a-1b2c3d4e5f6a">
+    <DataSourceViewID>Fact_MatlTran</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="0e3f4a5b-6c7d-4e8f-0a1b-2c3d4e5f6a7b">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>IgnoreError</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="1f4a5b6c-7d8e-4f9a-1b2c-3d4e5f6a7b8c">
+      <ID>Transaction Detail Key</ID>
+      <Name>Transaction Detail Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a5b6c7d-8e9f-4a1b-2c3d-4e5f6a7b8c9d">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3b6c7d8e-9f0a-4b2c-3d4e-5f6a7b8c9d0e">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>TransactionType</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="4c7d8e9f-0a1b-4c3d-4e5f-6a7b8c9d0e1f">
+          <DataType>BigInt</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5d8e9f0a-1b2c-4d4e-5f6a-7b8c9d0e1f2a">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>TransactionNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6e9f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f0a1b2c-3d4e-4f6a-7b8c-9d0e1f2a3b4c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Warehouse</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="8a1b2c3d-4e5f-4a7b-8c9d-0e1f2a3b4c5d">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b2c3d4e-5f6a-4b8c-9d0e-1f2a3b4c5d6e">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Location</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="0c3d4e5f-6a7b-4c9d-0e1f-2a3b4c5d6e7f">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d4e5f6a-7b8c-4d0e-1f2a-3b4c5d6e7f8a">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>ReferenceType</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="2e5f6a7b-8c9d-4e1f-2a3b-4c5d6e7f8a9b">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f6a7b8c-9d0e-4f2a-3b4c-5d6e7f8a9b0c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>ReferenceNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="4a7b8c9d-0e1f-4a3b-4c5d-6e7f8a9b0c1d">
+          <DataType>SmallInt</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b8c9d0e-1f2a-4b4c-5d6e-7f8a9b0c1d2e">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>LineSuffix</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0e1f2a3b-4c5d-4e6f-7a8b-9c0d1e2f3a4b">
+          <TableID>DimTransactionDetail</TableID>
+          <ColumnID>TransactionDetailName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f">
+          <AttributeID>Transaction Type</AttributeID>
+          <Name>Transaction Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d0e1f2a-3b4c-4d6e-7f8a-9b0c1d2e3f4a">
+          <AttributeID>Transaction Number</AttributeID>
+          <Name>Transaction Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8e1f2a3b-4c5d-4e7f-8a9b-0c1d2e3f4a5b">
+          <AttributeID>Warehouse</AttributeID>
+          <Name>Warehouse</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9f2a3b4c-5d6e-4f8a-9b0c-1d2e3f4a5b6c">
+          <AttributeID>Location</AttributeID>
+          <Name>Location</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0a3b4c5d-6e7f-4a9b-0c1d-2e3f4a5b6c7d">
+          <AttributeID>Reference Type</AttributeID>
+          <Name>Reference Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1b4c5d6e-7f8a-4b0c-1d2e-3f4a5b6c7d8e">
+          <AttributeID>Reference Number</AttributeID>
+          <Name>Reference Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2c5d6e7f-8a9b-4c1d-2e3f-4a5b6c7d8e9f">
+          <AttributeID>Line Suffix</AttributeID>
+          <Name>Line Suffix</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3d6e7f8a-9b0c-4d2e-3f4a-5b6c7d8e9f0a">
+      <ID>Transaction Type</ID>
+      <Name>Transaction Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4e7f8a9b-0c1d-4e3f-4a5b-6c7d8e9f0a1b">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f8a9b0c-1d2e-4f4a-5b6c-7d8e9f0a1b2c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>TransactionType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6a9b0c1d-2e3f-4a5b-6c7d-8e9f0a1b2c3d">
+      <ID>Transaction Number</ID>
+      <Name>Transaction Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b0c1d2e-3f4a-4b6c-7d8e-9f0a1b2c3d4e">
+          <DataType>BigInt</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c1d2e3f-4a5b-4c7d-8e9f-0a1b2c3d4e5f">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>TransactionNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9d2e3f4a-5b6c-4d8e-9f0a-1b2c3d4e5f6a">
+      <ID>Warehouse</ID>
+      <Name>Warehouse</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0e3f4a5b-6c7d-4e9f-0a1b-2c3d4e5f6a7b">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f4a5b6c-7d8e-4f0a-1b2c-3d4e5f6a7b8c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Warehouse</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2a5b6c7d-8e9f-4a1b-2c3d-4e5f6a7b8c9d">
+      <ID>Location</ID>
+      <Name>Location</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3b6c7d8e-9f0a-4b2c-3d4e-5f6a7b8c9d0e">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c7d8e9f-0a1b-4c3d-4e5f-6a7b8c9d0e1f">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Location</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d8e9f0a-1b2c-4d4e-5f6a-7b8c9d0e1f2a">
+      <ID>Reference Type</ID>
+      <Name>Reference Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e9f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f0a1b2c-3d4e-4f6a-7b8c-9d0e1f2a3b4c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>ReferenceType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8a1b2c3d-4e5f-4a7b-8c9d-0e1f2a3b4c5d">
+      <ID>Reference Number</ID>
+      <Name>Reference Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9b2c3d4e-5f6a-4b8c-9d0e-1f2a3b4c5d6e">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c3d4e5f-6a7b-4c9d-0e1f-2a3b4c5d6e7f">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>ReferenceNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1d4e5f6a-7b8c-4d0e-1f2a-3b4c5d6e7f8a">
+      <ID>Line Suffix</ID>
+      <Name>Line Suffix</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2e5f6a7b-8c9d-4e1f-2a3b-4c5d6e7f8a9b">
+          <DataType>SmallInt</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f6a7b8c-9d0e-4f2a-3b4c-5d6e7f8a9b0c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>LineSuffix</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
