@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2270dd26-70d1-4da2-bdb3-6f4f987e3988" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="311daccd-4cbd-4e4f-9cca-ffbd38ed823c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Fact_MatlTran</ID>
   <Name>Fact_MatlTran</Name>
   <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-14058" scrolltop="6019" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="32032" y="6914" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8864" scrolltop="-727" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="32032" y="6914" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
                   </font>
@@ -71,10 +71,10 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3157" top="4301" logicalid="14" controlid="9" masterid="0" hint1="0" hint2="0" width="1931" height="1299" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3157" top="4301" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="1931" height="1299" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -91,10 +91,10 @@
                     <point x="3457" y="5300" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3157" top="7200" logicalid="15" controlid="10" masterid="0" hint1="0" hint2="0" width="2354" height="815" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3157" top="7200" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="2354" height="815" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -115,8 +115,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>-14058</DiagramViewPortLeft>
-            <DiagramViewPortTop>6019</DiagramViewPortTop>
+            <DiagramViewPortLeft>-8864</DiagramViewPortLeft>
+            <DiagramViewPortTop>-727</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -131,7 +131,7 @@
       <xs:element name="Fact_MatlTran" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0233c224-56c5-42da-b8ed-d6bc986ddfdf">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="Fact_MatlTran" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="fb393182-062f-4264-a56f-957495de58dc" msprop:QueryDefinition="SELECT DateKey, Site_Key, SiteItemKey, TransactionType, TransactionNumber, Quantity, Warehouse, Location, WorkCenter, ReferenceType, ReferenceNumber, LineSuffix, Release, UserCode, ReasonCode, Backflush, CreateDate, PrimaryKey, SourceSystem, DateKey AS Expr1&#xD;&#xA;FROM   Fact_MatlTran" msprop:FriendlyName="Fact_MatlTran" msprop:TableType="View" msprop:DbTableName="Fact_MatlTran" msprop:Description="">
+            <xs:element name="Fact_MatlTran" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="fb393182-062f-4264-a56f-957495de58dc" msprop:QueryDefinition="SELECT DateKey, Site_Key, SiteItemKey, TransactionType, TransactionNumber, Quantity, Warehouse, Location, WorkCenter, ReferenceType, ReferenceNumber, LineSuffix, Release, UserCode, ReasonCode, Backflush, CreateDate, PrimaryKey, SourceSystem&#xD;&#xA;FROM   Fact_MatlTran" msprop:FriendlyName="Fact_MatlTran" msprop:TableType="View" msprop:DbTableName="Fact_MatlTran" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Site_Key" msprop:FriendlyName="Site_Key" msprop:DbColumnName="Site_Key" msprop:design-time-name="80790076-748e-4022-8440-f7507ac75120" type="xs:int" minOccurs="0" />
@@ -219,14 +219,13 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="ced5cada-bc85-4b05-b016-e63ef6ee9eba" type="xs:int" minOccurs="0" />
-                  <xs:element name="Expr1" msprop:DbColumnName="Expr1" msprop:design-time-name="336a25fe-e402-455a-929a-57f1e2a36d01" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="DimDate" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="02042c54-f428-4b8b-b3c2-62ec612feef3" msprop:QueryDefinition="SELECT DateKey, DateDimID, [Date], CalendarYear, CalendarQuarter, CalendarQuarterName, CalendarMonth, CalendarMonthName, CalendarMonthShortName, CalendarWeek, CalendarWeekName, CalendarDayofYear, DayofMonth, DayofWeek, DayOfWeekName, DayOfWeekShortName, &#xD;&#xA;             IsWeekend, IsWeekday, IsHoliday, IsLeapYear, IsCurrentDate, IsCurrentCalendarWeek, IsCurrentCalendarMonth, IsCurrentCalendarQuarter, IsCurrentCalendarYear, PayrollWeek&#xD;&#xA;FROM   Dim_Date" msprop:FriendlyName="DimDate" msprop:TableType="View" msprop:DbTableName="DimDate" msprop:Description="">
+            <xs:element name="DimDate" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="02042c54-f428-4b8b-b3c2-62ec612feef3" msprop:QueryDefinition="SELECT DateKey, DateDimID, [Date], CalendarYear, CalendarQuarter, CalendarQuarterName, CalendarMonth, CalendarMonthName, CalendarMonthShortName, CalendarWeek, CalendarWeekName, CalendarDayofYear, DayofMonth, DayofWeek, DayOfWeekName, DayOfWeekShortName, &#xD;&#xA;             IsWeekend, IsWeekday, IsHoliday, IsLeapYear, IsCurrentDate, IsCurrentCalendarWeek, IsCurrentCalendarMonth, IsCurrentCalendarQuarter, IsCurrentCalendarYear, PayrollWeek&#xD;&#xA;FROM   Dim_Date&#xD;&#xA;WHERE (CalendarYear &gt;= YEAR(GETDATE()) - 3) AND ([Date] &lt; GETDATE())" msprop:FriendlyName="DimDate" msprop:TableType="View" msprop:DbTableName="DimDate" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="DateKey" msdata:ReadOnly="true" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="5be983cb-4ca7-4158-a74c-d7795de6043d" type="xs:int" />
+                  <xs:element name="DateKey" msdata:ReadOnly="true" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="5be983cb-4ca7-4158-a74c-d7795de6043d" type="xs:int" minOccurs="0" />
                   <xs:element name="DateDimID" msprop:FriendlyName="DateDimID" msprop:DbColumnName="DateDimID" msprop:design-time-name="4de31335-62ce-495b-b695-e018f4c44722" type="xs:int" minOccurs="0" />
                   <xs:element name="Date" msprop:FriendlyName="Date" msprop:DbColumnName="Date" msprop:design-time-name="3c4b8ce7-a964-40ff-b2bf-99a48b64e6e3" minOccurs="0">
                     <xs:simpleType>
@@ -303,7 +302,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="DimSite" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="10827059-e7af-47bd-97d0-6fa297663e3c" msprop:QueryDefinition="SELECT Site_Key, SiteID, SiteName, DateAdded, DateUpdated, SourceSystem&#xD;&#xA;FROM   Dim_Site" msprop:FriendlyName="DimSite" msprop:TableType="View" msprop:DbTableName="DimSite" msprop:Description="">
+            <xs:element name="DimSite" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="10827059-e7af-47bd-97d0-6fa297663e3c" msprop:QueryDefinition="SELECT Site_Key, SiteID, SiteName, DateAdded, DateUpdated, SourceSystem&#xD;&#xA;FROM   Dim_Site&#xD;&#xA;WHERE  SiteID IN ('CNHDEPOT', 'CNHRECLS', 'CNHREMAN')" msprop:FriendlyName="DimSite" msprop:TableType="View" msprop:DbTableName="DimSite" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Site_Key" msdata:ReadOnly="true" msprop:FriendlyName="Site_Key" msprop:DbColumnName="Site_Key" msprop:design-time-name="e60a3e3f-ce7a-4148-adcf-acd5935927a3" type="xs:int" />
@@ -364,6 +363,7 @@
       </xs:annotation>
     </xs:schema>
     <Fact_MatlTran xmlns="">
+      <Fact_MatlTran />
       <Fact_MatlTran />
     </Fact_MatlTran>
   </Schema>
