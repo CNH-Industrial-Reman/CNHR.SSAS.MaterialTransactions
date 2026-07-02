@@ -6,28 +6,6 @@
     <Name>CNHR.SSAS.MaterialTransactions.database</Name>
     <FullPath>CNHR.SSAS.MaterialTransactions.database</FullPath>
   </Database>
-  <Cubes>
-    <ProjectItem>
-      <Name>MaterialTransactions.cube</Name>
-      <FullPath>MaterialTransactions.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>MaterialTransactions.partitions</Name>
-          <FullPath>MaterialTransactions.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-  </Cubes>
-  <Dimensions>
-    <ProjectItem>
-      <Name>Dim Date.dim</Name>
-      <FullPath>Dim Date.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Site.dim</Name>
-      <FullPath>Dim Site.dim</FullPath>
-    </ProjectItem>
-  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>CNH Reman Stagearea.ds</Name>
