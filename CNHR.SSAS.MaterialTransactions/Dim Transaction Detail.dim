@@ -10,9 +10,10 @@
   </Source>
   <UnknownMember>Visible</UnknownMember>
   <ErrorConfiguration dwd:design-time-name="0e3f4a5b-6c7d-4e8f-0a1b-2c3d4e5f6a7b">
-    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyErrorLimit>-1</KeyErrorLimit>
+    <KeyNotFound>IgnoreError</KeyNotFound>
     <KeyDuplicate>IgnoreError</KeyDuplicate>
-    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
@@ -82,10 +83,19 @@
             <ColumnID>LineSuffix</ColumnID>
           </Source>
         </KeyColumn>
+        <KeyColumn dwd:design-time-name="2c3d4e5f-6a7b-48c9-9d0e-1f2a3b4c5d6e">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f8a9b0c-1d2e-4f5a-6b7c-8d9e0f1a2b3c">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Item</ColumnID>
+          </Source>
+        </KeyColumn>
       </KeyColumns>
       <NameColumn dwd:design-time-name="9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a">
         <DataType>WChar</DataType>
-        <DataSize>100</DataSize>
+        <DataSize>130</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="0e1f2a3b-4c5d-4e6f-7a8b-9c0d1e2f3a4b">
           <TableID>DimTransactionDetail</TableID>
           <ColumnID>TransactionDetailName</ColumnID>
@@ -95,30 +105,42 @@
         <AttributeRelationship dwd:design-time-name="6c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f">
           <AttributeID>Transaction Type</AttributeID>
           <Name>Transaction Type</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="7d0e1f2a-3b4c-4d6e-7f8a-9b0c1d2e3f4a">
           <AttributeID>Transaction Number</AttributeID>
           <Name>Transaction Number</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="8e1f2a3b-4c5d-4e7f-8a9b-0c1d2e3f4a5b">
           <AttributeID>Warehouse</AttributeID>
           <Name>Warehouse</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="9f2a3b4c-5d6e-4f8a-9b0c-1d2e3f4a5b6c">
           <AttributeID>Location</AttributeID>
           <Name>Location</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="0a3b4c5d-6e7f-4a9b-0c1d-2e3f4a5b6c7d">
           <AttributeID>Reference Type</AttributeID>
           <Name>Reference Type</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="1b4c5d6e-7f8a-4b0c-1d2e-3f4a5b6c7d8e">
           <AttributeID>Reference Number</AttributeID>
           <Name>Reference Number</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="2c5d6e7f-8a9b-4c1d-2e3f-4a5b6c7d8e9f">
           <AttributeID>Line Suffix</AttributeID>
           <Name>Line Suffix</Name>
+          <Cardinality>Many</Cardinality>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eb8e38f3-c010-42e3-9646-682580fc4765">
+          <AttributeID>Item</AttributeID>
+          <Name>Item</Name>
+          <Cardinality>Many</Cardinality>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -236,6 +258,23 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="3f6a7b8c-9d0e-4f2a-3b4c-5d6e7f8a9b0c">
             <TableID>DimTransactionDetail</TableID>
             <ColumnID>LineSuffix</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0e43041b-3168-4318-9a41-1fb0536c233c">
+      <ID>Item</ID>
+      <Name>Item</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8d9a7ad1-1736-4376-aefe-b2a6831537da">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="781b2110-379e-42db-acdf-3e5b0ab23b07">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>Item</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

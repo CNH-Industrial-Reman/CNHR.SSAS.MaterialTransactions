@@ -60,17 +60,17 @@
           <ConfigurationSetting>
             <Id>CNH Reman Stagearea</Id>
             <Name>CNH Reman Stagearea</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse\busintel;Integrated Security=SSPI;Initial Catalog=CNHReman_Stagearea</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse-dev;Integrated Security=SSPI;Initial Catalog=CNHReman_Stagearea</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>CNH Reman Warehouse</Id>
             <Name>CNH Reman Warehouse</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse\busintel;Integrated Security=SSPI;Initial Catalog=CNHReman_Warehouse</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse-dev;Integrated Security=SSPI;Initial Catalog=CNHReman_Warehouse</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>CNH Reman Warehouse CSI</Id>
             <Name>CNH Reman Warehouse CSI</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse\busintel;Integrated Security=SSPI;Initial Catalog=CNHReman_Warehouse_CSI</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=datawarehouse-dev;Integrated Security=SSPI;Initial Catalog=CNHReman_Warehouse_CSI</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

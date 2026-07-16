@@ -131,7 +131,7 @@
       <xs:element name="Fact_MatlTran" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0233c224-56c5-42da-b8ed-d6bc986ddfdf">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="Fact_MatlTran" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="fb393182-062f-4264-a56f-957495de58dc" msprop:QueryDefinition="SELECT DateKey, Site_Key, SiteItemKey, TransactionType, TransactionNumber, Quantity, Warehouse, Location, WorkCenter, ReferenceType, ReferenceNumber, LineSuffix, Release, UserCode, ReasonCode, Backflush, CreateDate, PrimaryKey, SourceSystem&#xD;&#xA;FROM   Fact_MatlTran" msprop:FriendlyName="Fact_MatlTran" msprop:TableType="View" msprop:DbTableName="Fact_MatlTran" msprop:Description="">
+            <xs:element name="Fact_MatlTran" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="fb393182-062f-4264-a56f-957495de58dc" msprop:QueryDefinition="SELECT DateKey, Site_Key, SiteItemKey, TransactionType, TransactionNumber, Quantity,&#xD;&#xA;             COALESCE (NULLIF (LTRIM(RTRIM(Warehouse)), ''), 'NA') AS Warehouse,&#xD;&#xA;             COALESCE (NULLIF (LTRIM(RTRIM(Location)), ''), 'NA') AS Location,&#xD;&#xA;             WorkCenter, ReferenceType,&#xD;&#xA;             COALESCE (NULLIF (LTRIM(RTRIM(ReferenceNumber)), ''), 'NA') AS ReferenceNumber,&#xD;&#xA;             COALESCE (LineSuffix, -1) AS LineSuffix,&#xD;&#xA;             Release, UserCode, ReasonCode, Backflush, CreateDate, PrimaryKey, SourceSystem, &#xD;&#xA;             COALESCE (NULLIF (LTRIM(RTRIM(Item)), ''), 'NA') AS Item&#xD;&#xA;FROM   Fact_MatlTran&#xD;&#xA;WHERE  DateKey IN (SELECT DateKey FROM Dim_Date WHERE (CalendarYear &gt;= YEAR(GETDATE()) - 7) AND ([Date] &lt; GETDATE()))&#xD;&#xA;       AND NOT (TransactionType = 'N' AND ReferenceType = 'J')" msprop:FriendlyName="Fact_MatlTran" msprop:TableType="View" msprop:DbTableName="Fact_MatlTran" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="Site_Key" msprop:FriendlyName="Site_Key" msprop:DbColumnName="Site_Key" msprop:design-time-name="80790076-748e-4022-8440-f7507ac75120" type="xs:int" minOccurs="0" />
@@ -219,10 +219,17 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="ced5cada-bc85-4b05-b016-e63ef6ee9eba" type="xs:int" minOccurs="0" />
+                  <xs:element name="Item" msprop:DbColumnName="Item" msprop:design-time-name="925f5392-8588-4e24-aa63-c50009113adc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="DimDate" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="02042c54-f428-4b8b-b3c2-62ec612feef3" msprop:QueryDefinition="SELECT DateKey, DateDimID, [Date], CalendarYear, CalendarQuarter, CalendarQuarterName, CalendarMonth, CalendarMonthName, CalendarMonthShortName, CalendarWeek, CalendarWeekName, CalendarDayofYear, DayofMonth, DayofWeek, DayOfWeekName, DayOfWeekShortName, &#xD;&#xA;             IsWeekend, IsWeekday, IsHoliday, IsLeapYear, IsCurrentDate, IsCurrentCalendarWeek, IsCurrentCalendarMonth, IsCurrentCalendarQuarter, IsCurrentCalendarYear, PayrollWeek&#xD;&#xA;FROM   Dim_Date&#xD;&#xA;WHERE (CalendarYear &gt;= YEAR(GETDATE()) - 3) AND ([Date] &lt; GETDATE())" msprop:FriendlyName="DimDate" msprop:TableType="View" msprop:DbTableName="DimDate" msprop:Description="">
+            <xs:element name="DimDate" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="02042c54-f428-4b8b-b3c2-62ec612feef3" msprop:QueryDefinition="SELECT DateKey, DateDimID, [Date], CalendarYear, CalendarQuarter, CalendarQuarterName, CalendarMonth, CalendarMonthName, CalendarMonthShortName, CalendarWeek, CalendarWeekName, CalendarDayofYear, DayofMonth, DayofWeek, DayOfWeekName, DayOfWeekShortName, &#xD;&#xA;             IsWeekend, IsWeekday, IsHoliday, IsLeapYear, IsCurrentDate, IsCurrentCalendarWeek, IsCurrentCalendarMonth, IsCurrentCalendarQuarter, IsCurrentCalendarYear, PayrollWeek&#xD;&#xA;FROM   Dim_Date&#xD;&#xA;WHERE (CalendarYear &gt;= YEAR(GETDATE()) - 7) AND ([Date] &lt; GETDATE())" msprop:FriendlyName="DimDate" msprop:TableType="View" msprop:DbTableName="DimDate" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="DateKey" msdata:ReadOnly="true" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="5be983cb-4ca7-4158-a74c-d7795de6043d" type="xs:int" minOccurs="0" />
@@ -344,7 +351,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="DimTransactionDetail" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="7a1c2e4f-9b3d-4a6e-8f1c-2d5e7a9b3c1d" msprop:QueryDefinition="SELECT DISTINCT TransactionType, TransactionNumber, Warehouse, Location, ReferenceType, ReferenceNumber, LineSuffix,&#xD;&#xA;       ISNULL(TransactionType, '') + '-' + CAST(TransactionNumber AS VARCHAR(20)) + '-' + ISNULL(Warehouse, '') + '-' + ISNULL(Location, '') + '-' + ISNULL(ReferenceType, '') + '-' + ISNULL(ReferenceNumber, '') + '-' + ISNULL(CAST(LineSuffix AS VARCHAR(6)), '') AS TransactionDetailName&#xD;&#xA;FROM   Fact_MatlTran" msprop:FriendlyName="DimTransactionDetail" msprop:TableType="View" msprop:DbTableName="DimTransactionDetail" msprop:Description="">
+            <xs:element name="DimTransactionDetail" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:design-time-name="7a1c2e4f-9b3d-4a6e-8f1c-2d5e7a9b3c1d" msprop:QueryDefinition="SELECT DISTINCT TransactionType, TransactionNumber,&#xD;&#xA;       COALESCE (NULLIF (LTRIM(RTRIM(Warehouse)), ''), 'NA') AS Warehouse,&#xD;&#xA;       COALESCE (NULLIF (LTRIM(RTRIM(Location)), ''), 'NA') AS Location,&#xD;&#xA;       ReferenceType,&#xD;&#xA;       COALESCE (NULLIF (LTRIM(RTRIM(ReferenceNumber)), ''), 'NA') AS ReferenceNumber,&#xD;&#xA;       COALESCE (LineSuffix, -1) AS LineSuffix,&#xD;&#xA;       COALESCE (NULLIF (LTRIM(RTRIM(Item)), ''), 'NA') AS Item,&#xD;&#xA;       ISNULL(TransactionType, '') + '-' + CAST(TransactionNumber AS VARCHAR(20)) + '-' + COALESCE (NULLIF (LTRIM(RTRIM(Warehouse)), ''), 'NA') + '-' + COALESCE (NULLIF (LTRIM(RTRIM(Location)), ''), 'NA') + '-' + ISNULL(ReferenceType, '') + '-' + COALESCE (NULLIF (LTRIM(RTRIM(ReferenceNumber)), ''), 'NA') + '-' + CAST(COALESCE(LineSuffix, -1) AS VARCHAR(6)) + '-' + COALESCE (NULLIF (LTRIM(RTRIM(Item)), ''), 'NA') AS TransactionDetailName&#xD;&#xA;FROM   Fact_MatlTran" msprop:FriendlyName="DimTransactionDetail" msprop:TableType="View" msprop:DbTableName="DimTransactionDetail" msprop:Description="">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="TransactionType" msprop:FriendlyName="TransactionType" msprop:DbColumnName="TransactionType" msprop:design-time-name="1b2c3d4e-5f6a-4b7c-8d9e-0f1a2b3c4d5e" minOccurs="0">
@@ -384,10 +391,17 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="LineSuffix" msprop:FriendlyName="LineSuffix" msprop:DbColumnName="LineSuffix" msprop:design-time-name="7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e" type="xs:short" minOccurs="0" />
+                  <xs:element name="Item" msprop:FriendlyName="Item" msprop:DbColumnName="Item" msprop:design-time-name="7f8a9b0c-1d2e-4f5a-6b7c-8d9e0f1a2b3c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                   <xs:element name="TransactionDetailName" msprop:FriendlyName="TransactionDetailName" msprop:DbColumnName="TransactionDetailName" msprop:design-time-name="8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="100" />
+                        <xs:maxLength value="130" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -413,13 +427,14 @@
           <xs:field xpath="ReferenceType" />
           <xs:field xpath="ReferenceNumber" />
           <xs:field xpath="LineSuffix" />
+          <xs:field xpath="Item" />
         </xs:unique>
       </xs:element>
       <xs:annotation>
         <xs:appinfo>
           <msdata:Relationship name="Fact_MatlTran-DimDate" msdata:parent="DimDate" msdata:child="Fact_MatlTran" msdata:parentkey="DateKey" msdata:childkey="DateKey" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="Fact_MatlTran-DimSite" msdata:parent="DimSite" msdata:child="Fact_MatlTran" msdata:parentkey="Site_Key" msdata:childkey="Site_Key" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="Fact_MatlTran-DimTransactionDetail" msdata:parent="DimTransactionDetail" msdata:child="Fact_MatlTran" msdata:parentkey="TransactionType TransactionNumber Warehouse Location ReferenceType ReferenceNumber LineSuffix" msdata:childkey="TransactionType TransactionNumber Warehouse Location ReferenceType ReferenceNumber LineSuffix" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="Fact_MatlTran-DimTransactionDetail" msdata:parent="DimTransactionDetail" msdata:child="Fact_MatlTran" msdata:parentkey="TransactionType TransactionNumber Warehouse Location ReferenceType ReferenceNumber LineSuffix Item" msdata:childkey="TransactionType TransactionNumber Warehouse Location ReferenceType ReferenceNumber LineSuffix Item" msprop:Description="" msprop:IsLogical="True" />
         </xs:appinfo>
       </xs:annotation>
     </xs:schema>
