@@ -161,6 +161,29 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d1e2f3a4-5b6c-4d7e-8f9a-0b1c2d3e4f5a">
+          <AttributeID>Transaction Type Description</AttributeID>
+          <Name>Transaction Type Description</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e2f3a4b5-6c7d-4e8f-9a0b-1c2d3e4f5a6b">
+      <ID>Transaction Type Description</ID>
+      <Name>Transaction Type Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3a4b5c6-7d8e-4f9a-0b1c-2d3e4f5a6b7c">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4b5c6d7-8e9f-4a0b-1c2d-3e4f5a6b7c8d">
+            <TableID>DimTransactionDetail</TableID>
+            <ColumnID>TransactionTypeDescription</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>

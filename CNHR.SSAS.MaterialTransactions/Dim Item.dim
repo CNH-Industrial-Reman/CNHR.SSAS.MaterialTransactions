@@ -1,0 +1,64 @@
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f1a2b3c4-5d6e-4f7a-8b9c-0d1e2f3a4b5c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Item</ID>
+  <Name>Dim Item</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a2b3c4d5-6e7f-4a8b-9c0d-1e2f3a4b5c6d">
+    <DataSourceViewID>Fact_MatlTran</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="b3c4d5e6-7f8a-4b9c-0d1e-2f3a4b5c6d7e">
+    <KeyErrorLimit>-1</KeyErrorLimit>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <KeyDuplicate>IgnoreError</KeyDuplicate>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c4d5e6f7-8a9b-4c0d-1e2f-3a4b5c6d7e8f">
+      <ID>Item</ID>
+      <Name>Item</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5e6f7a8-9b0c-4d1e-2f3a-4b5c6d7e8f9a">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6f7a8b9-0c1d-4e2f-3a4b-5c6d7e8f9a0b">
+            <TableID>DimItem</TableID>
+            <ColumnID>Item</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f7a8b9c0-1d2e-4f3a-4b5c-6d7e8f9a0b1c">
+          <AttributeID>Item Description</AttributeID>
+          <Name>Item Description</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a8b9c0d1-2e3f-4a4b-5c6d-7e8f9a0b1c2d">
+      <ID>Item Description</ID>
+      <Name>Item Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b9c0d1e2-3f4a-4b5c-6d7e-8f9a0b1c2d3e">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c0d1e2f3-4a5b-4c6d-7e8f-9a0b1c2d3e4f">
+            <TableID>DimItem</TableID>
+            <ColumnID>ItemDescription</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
