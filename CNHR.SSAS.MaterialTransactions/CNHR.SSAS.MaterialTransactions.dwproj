@@ -35,6 +35,10 @@
       <Name>Dim Item.dim</Name>
       <FullPath>Dim Item.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Job Material.dim</Name>
+      <FullPath>Dim Job Material.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

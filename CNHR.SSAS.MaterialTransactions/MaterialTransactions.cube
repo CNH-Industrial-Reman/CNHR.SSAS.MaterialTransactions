@@ -218,6 +218,40 @@
         </Attribute>
       </Attributes>
     </Dimension>
+    <Dimension dwd:design-time-name="b2c3d4e5-6f7a-4b8c-9d0e-1f2a3b4c5d6e">
+      <ID>Dim Job Material</ID>
+      <Name>Dim Job Material</Name>
+      <DimensionID>Dim Job Material</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c3d4e5f6-7a8b-4c9d-0e1f-2a3b4c5d6e7f">
+          <AttributeID>Job Material Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d4e5f6a7-8b9c-4d0e-1f2a-3b4c5d6e7f8a">
+          <AttributeID>Job</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5f6a7b8-9c0d-4e1f-2a3b-4c5d6e7f8a9b">
+          <AttributeID>Suffix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6a7b8c9-0d1e-4f2a-3b4c-5d6e7f8a9b0c">
+          <AttributeID>OperNum</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7b8c9d0-1e2f-4a3b-4c5d-6e7f8a9b0c1d">
+          <AttributeID>Sequence</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b8c9d0e1-2f3a-4b4c-5d6e-7f8a9b0c1d2e">
+          <AttributeID>Units</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9d0e1f2-3a4b-4c5d-6e7f-8a9b0c1d2e3f">
+          <AttributeID>Planned Qty</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0e1f2a3-4b5c-4d6e-7f8a-9b0c1d2e3f4a">
+          <AttributeID>SL Qty Issued</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1f2a3b4-5c6d-4e7f-8a9b-0c1d2e3f4a5b">
+          <AttributeID>Actual Qty From Tran</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
   </Dimensions>
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="9c27dc13-e1f7-45a4-8a1e-e7e5c9a5021e">
@@ -393,6 +427,50 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="c3d4e5f6-7a8b-4c9d-0e1f-2a3b4c5d6e7f">
                     <TableID>Fact_MatlTran</TableID>
                     <ColumnID>Item</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f2a3b4c5-6d7e-4f8a-9b0c-1d2e3f4a5b6c">
+          <CubeDimensionID>Dim Job Material</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a3b4c5d6-7e8f-4a9b-0c1d-2e3f4a5b6c7d">
+              <AttributeID>Job Material Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b4c5d6e7-8f9a-4b0c-1d2e-3f4a5b6c7d8e">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c5d6e7f8-9a0b-4c1d-2e3f-4a5b6c7d8e9f">
+                    <TableID>Fact_MatlTran</TableID>
+                    <ColumnID>Job</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="d6e7f8a9-0b1c-4d2e-3f4a-5b6c7d8e9f0a">
+                  <DataType>SmallInt</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e7f8a9b0-1c2d-4e3f-4a5b-6c7d8e9f0a1b">
+                    <TableID>Fact_MatlTran</TableID>
+                    <ColumnID>Suffix</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="f8a9b0c1-2d3e-4f4a-5b6c-7d8e9f0a1b2c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a9b0c1d2-3e4f-4a5b-6c7d-8e9f0a1b2c3d">
+                    <TableID>Fact_MatlTran</TableID>
+                    <ColumnID>OperNum</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="b0c1d2e3-4f5a-4b6c-7d8e-9f0a1b2c3d4e">
+                  <DataType>SmallInt</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c1d2e3f4-5a6b-4c7d-8e9f-0a1b2c3d4e5f">
+                    <TableID>Fact_MatlTran</TableID>
+                    <ColumnID>Sequence</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
